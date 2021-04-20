@@ -1,0 +1,38 @@
+// Font Family
+$karla: 'Karla', sans-serif;
+$oswald: 'Oswald', sans-serif;
+
+// Colors ---------------
+$white: #ffffff;
+$black: #222;
+$grey:#dbe3e9;
+$theme-color: #07395c;
+$second-color: #df3940;
+$body-text-color: #28638c;
+$body-sec-text-color: #9cc5e2;
+$hr-border-color:#eceff8;
+$strock-1: #ecf2f7;
+$strock-2: #0e4469;
+$port-btn: #b4c7d6;
+
+
+// Heading Color
+$heading-color: #07395c;
+
+// Soft color
+$black-soft:#7e7e7e;
+
+
+// Responsive Variables
+$laptop: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs:'(max-width: 767px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+
+
+/*
+@media #{$laptop}{
+    display: none;
+}
+*/

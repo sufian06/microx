@@ -1,0 +1,75 @@
+/** Team CSS **/ 
+.team {
+    &__single {
+        &-img {
+            & img {
+                width: 100%;
+            }
+        }
+        &-content {
+            background: $white;
+            padding: 40px;
+            transition: 0.3s;
+            & h5 {
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                transition: 0.3s;
+            }
+            & h6 {
+                color: $second-color;
+                margin-bottom: 20px;
+                transition: 0.3s;
+            }
+            & p {
+                font-size: 15px;
+                transition: 0.3s;
+            }
+
+            &:hover, &.active {
+                background: $second-color;
+
+                & h5 {
+                    color: $white;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+                & h6 {
+                    color: $white;
+                }
+                & p {
+                    color: $white;
+                }
+                
+            }
+        }
+    }
+}
+
+
+.team-active {
+    & .slick-dots {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -60px;
+        & li {
+            display: inline-block;
+            margin-right: 8px;
+            & button {
+                background-color: $port-btn;
+                border: none;
+                text-indent: -99999px;
+                height: 5px;
+                width: 20px;
+                transition: 0.3s;               
+            }
+            &.slick-active {
+                & button {
+                    background-color: $second-color;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

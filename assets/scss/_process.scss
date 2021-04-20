@@ -1,0 +1,140 @@
+/** process css **/ 
+.process {
+    @media #{$sm}{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__number {
+        @media #{$sm}{
+            margin-right: 30px;
+        }
+        & span {
+            color: $second-color;
+            font-size: 120px;
+            font-family: $oswald;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+            @media #{$md}{
+                font-size: 90px;
+            }
+            @media #{$xs}{
+                font-size: 90px;
+            }
+            @media #{$sm}{
+                font-size: 120px;
+            }
+        }
+    }
+    &__content {
+        & h5 {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        & p {
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/** Award CSS **/ 
+.award {
+    &__content {
+        margin-bottom: 70px;
+        position: relative;
+        @media #{$md}{
+            margin-bottom: 30px;
+        }
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+        & h3 {
+            color: $white;
+            text-transform: uppercase;
+            @media #{$md}{
+                font-size: 40px;
+            }
+            @media #{$xs}{
+                font-size: 35px;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: -30px;
+            left: 0;
+            background: $second-color;
+            width: 60px;
+            height: 2px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: -30px;
+            left: 70px;
+            background: $second-color;
+            width: 20px;
+            height: 2px;
+        }
+    }
+    &__btn {
+        @media #{$md}{
+            margin-bottom: 60px;
+        }
+        @media #{$xs}{
+            margin-bottom: 10px;
+            & a {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.award-widget {
+    @media #{$xs}{
+        margin-bottom: 30px;
+    }
+    & h5 {
+        color: $white;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    & p {
+        margin: 0;
+        color: $body-sec-text-color;
+    }
+}
+
+/** Background Text CSS **/
+
+.award-area {
+    position: relative;
+    z-index: 1;
+    & .award-background-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        & h2 {
+            color: transparent;
+            font-size: 265px;
+            -webkit-text-stroke-color: $strock-2;
+            -webkit-text-stroke-width: 2px;
+
+            @media #{$laptop}{
+                font-size: 190px;
+            }
+            @media #{$lg}{
+                font-size: 150px;
+            }
+            @media #{$md}{
+                font-size: 100px;
+            }
+            @media #{$xs}{
+                font-size: 55px;
+            }
+        }
+    }
+}

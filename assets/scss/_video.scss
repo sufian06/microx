@@ -1,0 +1,33 @@
+/** Video CSS **/ 
+.video-area {
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    @media #{$lg}{
+        min-height: 550px;
+    }
+    @media #{$md}{
+        min-height: 450px;
+    }
+    @media #{$xs}{
+        min-height: 400px;
+    }
+}
+.video-btn {
+    position: relative;
+    z-index: 2;
+    & a {
+        font-size: 25px;
+        font-family: $oswald;
+        &:hover {
+            color: $second-color;
+        }
+    }
+    & .video-btn-bg {
+        position: absolute;
+        left: 0;
+        top: -60px;
+        right: 0;
+        z-index: -1;
+    }
+}

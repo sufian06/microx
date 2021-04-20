@@ -1,0 +1,66 @@
+/** Contact Form CSS **/ 
+.contact-area {
+    @media #{$xs}{
+        padding-bottom: 0;
+    }
+}
+.custome-bg {
+    width: 1414px;
+    margin: auto;
+    @media #{$laptop}{
+        width: 100%;
+    }
+    @media #{$lg}{
+        width: 100%;
+    }
+    @media #{$md}{
+        width: 100%;
+    }
+    @media #{$xs}{
+        width: 100%;
+    }
+}
+.contact-input {
+    position: relative;
+    margin-bottom: 33px;
+    & input {
+        display: inline-block;
+        width: 100%;
+        height: 57px;
+        border: 0;
+        border-bottom: 2px solid $theme-color;
+        padding-left: 50px;
+        padding-right: 20px;
+        font-size: 16px;
+        font-family: $oswald;
+        color: $theme-color;
+        transition: 0.3s;
+        &:focus {
+            border-color: $second-color;
+        }
+    }
+    & textarea {
+        height: 150px;
+        display: inline-block;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $theme-color;
+        padding-left: 50px;
+        font-size: 16px;
+        font-family: $oswald;
+        color: $theme-color;
+        &:focus {
+            border-color: $second-color;
+        }
+    }
+    & .input-icon, .input-textarea {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $second-color;
+    }
+    & .input-textarea {
+        top: 15px;
+    }
+}

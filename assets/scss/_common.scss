@@ -1,0 +1,296 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap');
+
+
+ body {
+	font-family: $karla;
+	font-weight: 400;
+    font-style: normal;
+    color:$body-text-color;
+}
+.img,img {
+	max-width: 100%;
+	@include transition(.3s);
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	@include transition(.3s);
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover
+{
+	color: inherit;
+	text-decoration: none;
+}
+a,
+button {
+	color: inherit;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $oswald;
+	color: $heading-color;
+	margin-top: 0px;
+	font-weight: 600;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 60px;
+}
+h3 {
+	font-size: 50px;
+}
+h4 {
+	font-size: 30px;
+}
+h5 {
+	font-size: 24px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 30px;
+	color: $body-text-color;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid $hr-border-color;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: $black-soft;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: $black;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $black;
+	color:$white;
+	text-shadow: none;
+}
+::selection {
+	background: $black;
+	color: $white;
+	text-shadow: none;
+}
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+	color: $grey;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $grey;
+	font-size: 14px;
+	opacity: 1;
+}
+.m-btn {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $white;
+	border: 2px solid $white;
+	padding: 20px 50px;
+	display: inline-block;
+	font-family: $oswald;
+	&:hover {
+		color: $theme-color;
+		border-color: $theme-color;
+	}
+	&.msb-btn {
+		&:hover {
+			border-color: $second-color;
+			color: $second-color;
+		}
+	}
+	&.mbs-btn {
+		border-color: transparent;
+		background: $second-color;
+		&:hover {
+			background: $white;
+			color: $second-color;
+		}
+		&.cnt-btn {
+			&:hover {
+				background-color: $theme-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+/* scrollUp */
+#scrollUp {
+	background: $white;
+	height: 70px;
+	width: 70px;
+	right: 50px;
+	bottom: 77px;
+	color: $theme-color;
+	font-size: 20px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 70px;
+	transition: 0.3s;
+	&:hover {
+		background: $second-color;
+		color: $white;
+	}
+}
+
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+
+/*--
+    - Background color
+-----------------------------------------*/
+.grey-bg {
+	background: $grey;
+}
+.white-bg {
+	background:$white;
+}
+.black-bg {
+	background: $black;
+}
+.theme-bg {
+	background: $theme-color;
+}
+.second-bg {
+	background: $second-color;
+}
+// .primary-bg {
+// 	background: #222;
+// }
+
+/*--
+    - color
+-----------------------------------------*/
+.white-color {
+	color: $white;
+}
+.black-color {
+	color: $black;
+}
+.theme-color {
+	color: $theme-color;
+}
+// .primary-color {
+// 	color: #222;
+// }
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 40 {
+    .mt-#{5 * $i}{margin-top: 5px * $i;}
+}
+/*-- Margin Bottom --*/
+@for $i from 1 through 40 {
+    .mb-#{5 * $i}{margin-bottom: 5px *$i;}
+}
+/*-- Margin Left --*/
+@for $i from 1 through 40 {
+    .ml-#{5 * $i}{margin-left: 5px * $i;}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 40 {
+    .mr-#{5 * $i}{margin-right: 5px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 40 {
+    .pt-#{5 * $i}{padding-top: 5px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 40 {
+    .pb-#{5 * $i}{padding-bottom: 5px *$i;}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 40 {
+    .pl-#{5 * $i}{padding-left: 5px *$i;}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 40 {
+    .pr-#{5 * $i}{padding-right: 5px *$i;}
+}
+
+
+// others common css here :)
+
+

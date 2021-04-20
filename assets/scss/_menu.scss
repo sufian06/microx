@@ -1,0 +1,23 @@
+
+/** Main-menu **/
+.main-menu { 
+    & nav {
+        & ul {
+            & li {
+                display: inline-block;
+                margin-left: 55px;
+                &:first-child {margin: 0;}
+                & a {
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-family: $oswald;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

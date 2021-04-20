@@ -1,0 +1,216 @@
+/** Header-area **/
+
+.header-area {
+    padding: 50px 0;
+    &.header-sticky {
+       &.sticky {
+           padding: 30px 0;
+       } 
+    }
+}
+.header-transperant {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.sticky {
+    background-color: $second-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+
+/** Header Right **/
+
+.header-right {
+    & .header-bar {
+        button {
+            background: none;
+            color: $white;
+            border: none;
+            font-size: 30px;
+            margin-left: 40px;
+        }
+    }
+    & .header-search {
+        & a {
+            font-size: 30px;
+            margin-left: 40px;
+            color: $white;
+            @media #{$lg}{
+                margin-left: 0;
+            }
+            @media #{$md}{
+                margin-left: 0;
+            }
+            @media #{$xs}{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+/** Section Title CSS **/
+.section-title {
+    position: relative;
+    z-index: 2;
+    & h2 {
+        text-transform: uppercase;
+        @media #{$xs}{
+            font-size: 40px;
+        }
+    }
+    & span {
+        color: $second-color;
+    }
+    & p {
+        margin: 0;
+        padding: 0 250px;
+        @media #{$lg}{
+            padding: 0 50px;
+        }
+        @media #{$md}{
+            padding: 0 50px;
+        }
+        @media #{$xs}{
+            padding: 0;
+        }
+    }
+    &__back {
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        @media #{$md}{
+            top: -30px;
+        }
+        @media #{$xs}{
+            top: -30px;
+        }
+        & h3 {
+            font-size: 140px;
+            color: $white;
+            text-transform: uppercase;
+            @media #{$md}{
+                font-size: 100px;
+            }
+            @media #{$xs}{
+                font-size: 80px;
+            }
+        }
+        &.back-2 {
+            & h3 {
+                color: $grey;
+            }
+        }
+    }
+}
+
+
+/** Header Sidebar CSS **/
+.header-sidebar {
+    & .side-info {
+        background-color: #152136;
+        width: 340px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        padding: 35px;
+        transition: all 0.7s ease 0s;
+        transform: translateX(100%);
+        &.info-open {
+            transform: translateX(0);
+        }
+
+        & button {
+            background: none;
+            color: $second-color;
+            border: none;
+            float: left;
+            font-size: 24px;
+            padding: 0;
+            @media #{$lg}{
+                float: right;
+            }
+            @media (min-width: 1201px) {
+                float: right;
+            }
+        }
+        & .sidebar-info {
+            // border-top: 1px solid $second-color;
+            padding-top: 25px;
+            h4 {
+                font-size: 24px;
+                color: $white;
+                opacity: .9;
+            }
+            p {
+                color: $white;
+                margin: 0;
+                opacity: .65;
+            }
+        }
+
+        & .sidebar-instagram {
+            margin: 0 -2%;
+            overflow: hidden;
+            & a {
+                width: 29.33%;
+                margin: 0 2%;
+                float: left;
+                margin-bottom: 10px;
+                overflow: hidden;
+                & img {
+                    transform: scale(1.5);
+                    overflow: hidden;
+                }
+                &:hover {
+                    & img {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        & .sidebar-social-links {
+            & a {
+                color: $white;
+                font-size: 20px;
+                margin-right: 20px;
+                display: inline-block;
+                text-align: center;
+                &:hover {
+                    color: $second-color;
+                }
+            }
+        }
+        & .powered {
+            margin-top: 40px;
+            & span {
+                color: $body-sec-text-color;
+                font-size: 20px;
+                font-weight: 600;
+                font-family: $oswald;
+                & a {
+                    color: $second-color;
+                    font-family: $karla;
+                    font-weight: 600;
+                    font-size: 24px;
+                    letter-spacing: -2px;
+                    &:hover {
+                        color: $body-sec-text-color;
+                    }
+                }
+            }
+        }
+    }
+}

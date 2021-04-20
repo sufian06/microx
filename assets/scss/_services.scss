@@ -1,0 +1,146 @@
+/** Services CSS **/ 
+.services-area {
+    position: relative;
+    z-index: 1;
+    & .service-back-text {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -120px;
+        z-index: -1;
+        @media #{$xs}{
+            bottom: -30px;
+        }
+        & h2 {
+            font-size: 250px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: $strock-1;
+            color: transparent;
+            @media #{$md}{
+                font-size: 160px;
+            }
+            @media #{$xs}{
+                font-size: 60px;
+            }
+        }
+    }
+}
+.services {
+    position: relative;
+    padding: 55px;
+    @media #{$lg}{
+        padding: 20px;
+    }
+    @media #{$xs}{
+        padding: 0;
+    }
+    @media #{$sm}{
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    &__icon {
+        margin-right: 40px;
+        background-color: $white;
+        height: 170px;
+        width: 170px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 170px;
+        float: left;
+        align-items: center;
+        @media #{$lg}{
+            height: 120px;
+            width: 120px;
+            line-height: 120px;
+            margin-right: 20px;
+        }
+        @media #{$xs}{
+            float: none;
+        }
+        @media #{$sm}{
+            float: left;
+        }
+    }
+    &__content {
+        padding-top: 20px;
+        overflow: hidden;
+        & p {
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+
+    
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $theme-color;
+        padding: 60px;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        @media #{$lg}{
+            padding: 20px;
+        }
+        @media #{$xs}{
+            padding: 20px;
+            z-index: 3;
+        }
+        & p {
+            color: $white;
+            font-size: 18px;
+        }
+        &-content {
+            position: relative;
+            z-index: 1;
+            &-mark {
+                position: absolute;
+                top: -60px;
+                right: -60px;
+                margin: 0 auto;
+                z-index: -1;
+                @media #{$lg}{
+                    top: 0;
+                    right: 0;
+                }
+                @media #{$xs}{
+                    top: -20px;
+                    right: -20px;
+                }
+                & h3 {
+                    color: $white;
+                    font-size: 120px;
+                    line-height: 1;
+                    margin: 0;
+                    opacity: 0.04;
+                }
+            }
+        }
+
+    }
+
+    &:hover {
+        & .services__back {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+}
+
+.mf-btn {
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: $oswald;
+    display: inline-block;
+    text-transform: uppercase;
+    &:hover {
+        color: $second-color;
+    }
+}
+
+
+

@@ -1,0 +1,84 @@
+/** testimonial **/ 
+.testimonial {
+    @media #{$xs}{
+        flex-direction: column;
+    }
+    &__img {
+        margin-right: 60px;
+        max-width: 370px;
+        @media #{$md}{
+            max-width: 260px;
+            margin-right: 30px;
+        }
+        @media #{$xs}{
+            max-width: 300px;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        & img {
+            border-radius: 50%;
+            border: 5px dashed $theme-color;
+            padding: 10px;
+            
+        }
+    }
+    &__content {
+        @media #{$xs}{
+            text-align: center;
+        }
+        & h3 {
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            @media #{$lg}{
+                font-size: 35px;
+            }
+            @media #{$md}{
+                font-size: 28px;
+            }
+            @media #{$xs}{
+                font-size: 25px;
+            }
+        }
+        & a {
+            text-transform: uppercase;
+            &:hover {
+                color: $second-color;
+            }
+        }
+        & span {
+            color: $second-color;
+            font-size: 16px;
+        }
+        & p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.testimonial-active {
+    & .slick-dots {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        & li {
+            display: inline-block;
+            margin-right: 8px;
+            & button {
+                background: $port-btn;
+                border: 0;
+                text-indent: -999999px;
+                height: 5px;
+                width: 20px;
+                transition: .3s;
+            }
+            &.slick-active {
+                button {
+                    background: $second-color;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

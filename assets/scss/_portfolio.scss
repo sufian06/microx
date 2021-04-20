@@ -1,0 +1,19 @@
+.portfolio-area {
+    position: relative;
+    z-index: 1;
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.portfolio {
+    & a {
+        & img {
+            filter: grayscale(100%);
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+

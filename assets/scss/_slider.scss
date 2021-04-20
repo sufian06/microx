@@ -1,0 +1,62 @@
+/** Hero Area **/
+.hero-area {
+    
+    & .single-hero {
+        min-height: 1000px;
+        @media #{$laptop}{
+            min-height: 800px;
+        }
+        @media #{$lg}{
+            min-height: 700px;
+        }
+        @media #{$md}{
+            min-height: 650px;
+        }
+        @media #{$xs}{
+            min-height: 600px;
+        }
+    }
+}
+.hero-left {
+    @media #{$md}{
+        margin-top: 75px;
+    }
+    @media #{$xs}{
+        margin-bottom: -60px;
+    }
+    & h2 {
+        font-size: 80px;
+        font-weight: 600;
+        font-family: $oswald;
+        text-transform: uppercase;
+        margin-bottom: 38px;
+        @media #{$lg}{
+            font-size: 55px;
+            margin-top: 100px;
+        }
+        @media #{$xs}{
+            font-size: 50px;
+        }
+        @media #{$sm}{
+            font-size: 70px;
+        }
+        & span {
+            -webkit-text-fill-color:transparent;
+            -webkit-text-stroke-color: $white;
+            -webkit-text-stroke-width: 2px;
+        }
+    }
+}
+.hero-right {
+    & img {
+        max-width: inherit;
+        margin-top: 150px;
+        @media #{$laptop}{
+            max-width: 100%;
+        }
+        @media #{$lg}{
+            max-width: 100%;
+            margin-top: 183px;
+        }
+    }
+}
